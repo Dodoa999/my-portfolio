@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import LogosMarqueeSection from "../components/LogosMarqueeSection.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import PortfolioSection from "../components/PortfolioSection.astro";
+import AwardsSection from "../components/AwardsSection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout>
+  <!-- Back To Top Start -->
+  <button id="back-top" class="back-to-top">
+    <i class="fa-regular fa-arrow-up"></i>
+  </button>
+
+  <!--<< Mouse Cursor Start >>-->
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+
+  <Header />
+
+  <Hero />
+
+  <LogosMarqueeSection />
+
+  <ServicesSection />
+
+  <PortfolioSection />
+
+  <AwardsSection />
+
+  <TestimonialsSection />
+
+  <FaqSection />
+
+  <Contact />
+
+  <Footer />
+</Layout>

@@ -1,0 +1,94 @@
+---
+// Header.astro
+---
+
+<!-- Offcanvas Area Start -->
+<div class="fix-area">
+  <div class="offcanvas__info" id="offcanvas-panel" role="dialog" aria-modal="true" aria-label="Mobile menu" tabindex="-1">
+    <div class="offcanvas__wrapper">
+      <div class="offcanvas__content">
+        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+          <div class="offcanvas__logo">
+            <a href="/">
+              <img src="/assets/img/Logo-dominik.rara.png" alt="logo-img">
+            </a>
+          </div>
+          <div class="offcanvas__close">
+            <button>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <nav class="mobile-menu fix mb-3 offcanvas-nav" aria-label="Mobile menu">
+          <ul>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#portfolio">Projekty</a></li>
+            <li><a href="#recenze">Recenze</a></li>
+            <li><a href="#faq">Časté dotazy</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-button mt-4">
+          <a href="#kontakt" class="theme-btn w-100 text-center">
+            Kontakt <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas__overlay"></div>
+
+
+<!-- Header Section Start -->
+<header class="header-1" id="header-sticky">
+  <div class="container-fluid">
+    <div class="mega-menu-wrapper">
+      <div class="header-main">
+
+        <div class="logo">
+          <a href="/" class="header-logo">
+            <img src="/assets/img/Logo-dominik.rara.png" alt="logo-img">
+          </a>
+          <div class="logo-2">
+            <a href="/">
+              <img src="/assets/img/Logo-dominik.rara.png" alt="logo-2">
+            </a>
+          </div>
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <div class="mean__menu-wrapper d-none d-xl-block">
+          <div class="main-menu">
+            <nav id="mobile-menu">
+              <ul>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#portfolio">Projekty</a></li>
+                <li><a href="#recenze">Recenze</a></li>
+                <li><a href="#faq">Časté dotazy</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header-right d-flex justify-content-end align-items-center">
+          <a href="#kontakt" class="theme-btn">
+            Kontakt <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="header__hamburger d-xl-none my-auto">
+            <button type="button" class="sidebar__toggle" id="sidebar-toggle"
+              aria-label="Open menu" aria-expanded="false"
+              aria-controls="offcanvas-panel">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Offcanvas mobile nav (replaces meanmenu list styling) */
+.offcanvas-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.offcanvas-nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  color: var(--text, inherit);
+}
+.offcanvas-nav ul li a:hover {
+  color: var(--theme, currentColor);
+}
+
+/* Reusable icon + text row: horizontal, centered as group, vertical align */
+.icon-text-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-text-row img {
+  flex-shrink: 0;
+  display: block;
+  margin: 0; /* spacing from gap only */
+}
+
+/*
+ * FAQ accordion: Tailwind's .collapse utility (visibility: collapse) conflicts with
+ * Bootstrap's .collapse class on the same element. When a panel is open, Bootstrap
+ * adds .show but the element still has class "collapse", so Tailwind keeps it invisible.
+ * Override so the answer is visible when open or during the open/close animation.
+ */
+.faq-items .accordion-collapse.collapse.show,
+.faq-items .accordion-collapse.collapse.collapsing {
+  visibility: visible;
+}
+
+/*
+ * Testimonial quote icon + layout.
+ * - Icon: fixed size/position (align-self flex-start so it doesn't stretch with text).
+ * - Layout: override main.css flex-wrap: wrap (at max-width: 1199px) so icon and
+ *   text stay side-by-side on all breakpoints. Text gets min-width: 0 so it can
+ *   shrink and wrap within the remaining flex space.
+ */
+.testimonials-wrapper .testimonial-box-items .testi-content {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.testimonials-wrapper .testimonial-box-items .testi-content p {
+  min-width: 0;
+}
+.testimonials-wrapper .testimonial-box-items .testi-content .icon {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials-wrapper .testimonial-box-items .testi-content .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Testimonial typography: lighter hierarchy, readable quote */
+.testimonials-wrapper .testimonial-box-items .client-info .client-content h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.testimonials-wrapper .testimonial-box-items .client-info .client-content p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+.testimonials-wrapper .testimonial-box-items .testi-content p {
+  font-weight: 400;
+}
+
+
+
+
+
